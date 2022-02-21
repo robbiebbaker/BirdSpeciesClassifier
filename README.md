@@ -1,39 +1,10 @@
-![Title_image](docs/birds_classification_title_image.png)
-
 # Image Classification of birds
 
 **A whistle stop tour of how to use the latest image classification techniques to build and understand a deep neural network bird classifier**
 
-
 This is an investigation using PyTorch CNNs of deep image classificaton to solve a bird species classification problem with the [Caltech UCSD Birds dataset (CUB-200-2011)](http://www.vision.caltech.edu/visipedia/CUB-200.html).
 
-This is a collection of notebooks and tools designed to show how to setup, build, train and evaluate Convolutional Neural Network architectures using PyTorch, Torchvision and other 3rd party packages, to generate state-of-the-art classification results on a fine-grained, long-tailed distribution classification problem. The set of example notebooks will cover the following workflow:
-
-![workflow](docs/birds_roadmap.png)
-
-The repository includes a set of example notebooks which walks the user through all the processes required to train and evaluate a network, as well as interrogate what and how the network is making it's decisions through the use of neuron, layer and spatial activations interpretation ([Lucent](https://github.com/greentfrapp/lucent)) and image feature attributions ([Captum](https://captum.ai/)).
-
-We round off the work flow exploration by showing how to convert the PyTorch trained model into an [ONNX (Open Neural Network eXchange)](https://onnx.ai/) format, which enables the bird species classifier to be deployed on vast array of platforms, either in the cloud or on personal devices. We test the ONNX version of the model using the ***ONNX Runtime*** and compare these predictions to the PyTorch version of the model, to show that the inference performance is the same.
-
 # Change Log
-
-## v2.5 Cub tools package installation and environment creation updates
-
-### cub tools package installation
-
-Cub_tools (in pkg/) has now been [published to PYPI](https://pypi.org/project/cub-tools/) and can be easily installed in any environment using following commands:
-
-```shell
-pip install cub-tools
-```
-
-The head version can still be installed by cloning this repository and running the following:
-
-```shell
-cd pkg/
-
-pip install .
-```
 
 ### Installing a python training environment
 
@@ -48,7 +19,6 @@ To install an environment using the conda dependencies file, run:
 ```shell
 conda env create -f conda_depdencies.yml
 ```
-
 
 ## V2.0 Refactoring of training scripts to use YACS YAML configuration files
 
@@ -112,8 +82,6 @@ Release of the workshop material with per model training scripts.
 
 Caltech-UCSD Birds-200-2011 (CUB-200-2011) is an extended version of the CUB-200 dataset, with roughly double the number of images per class and new part location annotations. For detailed information about the dataset, please see the technical report linked below.
 
-
-
 Number of categories: 200
 
 Number of images: 11,788
@@ -130,7 +98,6 @@ To download the data click on the following links:
    
    **The image tarball should be downloaded to repository root, and extracted into the data/images_orig sub-directory, as shown below.***
                
-    
    2. Segmentations (optional, not need for this work) [CalTech Visipedia Website - segmentations.tgz](http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/segmentations.tgz)
     
 Place the files into the root of the cloned caltech_birds repo file structure.
@@ -168,18 +135,7 @@ Unzip the dowloaded zip files into cloned repository structure that replicates t
         pkg-|            ** CUB_TOOLS PYTHON PACKAGE. INSTALL FROM IN HERE.
         scripts-|        ** TRAINING SCRIPTS FOR PYTORCH CNN MODELS **
 
-
-
-# Workshop walk-through notebooks series
-
-**example_notebooks directory contains the walk-through workshop notebooks**, for following the full workflow of producing a bird classifier using deep neural networks, using a ResNet152 deep neural network architecture.
-
-See below on the requirements for installing and using the notebooks, as  well details of the additional folders including more CNN architecture investigations using the CUB-200-2011 dataset.
-
-
 # Installation
-
-For installation notes, [see package installation notes](https://github.com/ecm200/caltech_birds/blob/master/pkg/readme.md).
 
 # Additional files
         
